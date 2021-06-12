@@ -1,0 +1,20 @@
+{
+  "name": "my-crud-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm run build",
+    "install-frontend":"cd frontend && npm install",
+    "heroku-postbuild": "npm run install-frontend && npm run build",
+    "index":"nodemon backend/index.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run index\" \"npm run start --prefix frontend\"",
+    "start": "concurrently --kill-others-on-fail \"npm run index\" \"npm run start --prefix frontend\""
+
+  },
+  "engines": {
+    "node": "14.15.4"
+  },
+  "author": "btm",
+  "license": "ISC"
+}
