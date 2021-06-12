@@ -1,4 +1,11 @@
 const User = require("../Models/User");
+const razorPay = require("razorpay");
+const shortId = require("short-id");
+
+const razorpay = new razorPay({
+  key_id: process.env.RAZOR_KEY,
+  key_secret: process.env.RAZOR_KEY_SECRET,
+});
 
 const userCntrl = {
   registerUsers: async (req, res) => {

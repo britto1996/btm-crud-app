@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../HomeDashboard/Home.css";
 import { Jumbotron } from "react-bootstrap";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -28,7 +28,7 @@ const Header = () => {
           <GitHubIcon />
         </a>
       </p>
-      <button className="grab__a__coffee">Buy me a coffee</button>
+      <button className="grab__a__coffee">BUY ME A COFFEE</button>
     </Jumbotron>
   );
 };
